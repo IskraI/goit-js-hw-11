@@ -50,6 +50,7 @@ async function handleSearchPicture(event) {
   console.log(searchQuery);
   pixabayApi.query = searchQuery;
   pixabayApi.page = 1;
+  galleryEl.innerHTML = '';
   loadMoreBtnNotActive();
 
   if (!searchQuery) {
@@ -61,7 +62,6 @@ async function handleSearchPicture(event) {
   try {
     const { data } = await pixabayApi.fetchPicturies();
     if (!data.hits.length) {
-      galleryEl.innerHTML = '';
       Notiflix.Notify.failure(
         `Sorry, there are no images matching your search query: ${searchQuery}. Please try again. `
       );

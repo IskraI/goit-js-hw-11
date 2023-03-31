@@ -10,7 +10,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-  padding-left: 30px;
+  /* padding: 30px; */
 }
 a {
   text-decoration: none;
@@ -22,29 +22,78 @@ p {
   margin: 0px;
   padding: 0px;
 }
+.section {
+  width: 1440px;
+  padding: 0 15px 30px 15px;
+  margin: 0 auto;
+}
+.search-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+
+  background-color: #83c8e9;
+}
 .search-form {
-  font: inherit;
-  padding: 8px;
-  /* position: fixed; */
+  display: flex;
+  width: 600px;
+  margin: 15px auto;
+}
+
+.search-form > input {
+  height: 40px;
+  flex-grow: 1;
+  font-size: 18px;
+  padding-left: 15px;
+  border: 1px solid #223579;
+}
+
+.search-form > button,
+.load-more {
+  font-size: 14px;
+  padding: 10px 20px;
+  background-color: #2672a8;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 250ms linear;
+}
+.load-more {
+  display: block;
+  margin: 15 auto;
 }
 .gallery {
-  padding-top: 15px;
+  padding-left: 15px;
+
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
+
 .info {
   display: flex;
-  /* gap: 15px; */
   justify-content: space-between;
 }
+
 .info-item {
   text-align: center;
 }
-.is-hidden {
-  opacity: 0;
+.load-more.is-hidden {
+  display: none;
+}
+
+button:hover,
+button:focus {
+  background-color: #27ae60;
 }
 a .info {
   cursor: default;
   color: #212121;
+}
+button:disabled {
+  background-color: #b8d2de;
+  cursor: default;
 }

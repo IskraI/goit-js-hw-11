@@ -84,7 +84,7 @@ async function handleSearchPicture(event) {
   } catch (err) {
     galleryEl.textContent = 'Images not found';
   }
-
+  console.dir(loadMoreBtnEl);
   searchBtnNotActive();
 }
 
@@ -100,6 +100,7 @@ async function handleLoadMorePicture() {
     }
     galleryEl.insertAdjacentHTML('beforeend', pictureCardTpl(data.hits));
     scrollingPage();
+
     gallerysimple.refresh();
   } catch (err) {
     console.log(err);

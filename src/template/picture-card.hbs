@@ -1,8 +1,7 @@
 {{#each this}}
 <li class="gallery-item">
 <a href='{{this.largeImageURL}}' onclick="return false">
-  <div class='photo-card'>
-    <img class = "gallery-img"
+     <img class = "gallery-img"
       src='{{this.webformatURL}}'
       alt='{{this.tags}}'
       loading='lazy'
@@ -25,7 +24,7 @@
         <b>Downloads</b></br>
         {{this.downloads}}
       </p>
-    </div>
+   
   </div></a>
   </li>
  

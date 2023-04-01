@@ -42,7 +42,11 @@ function scrollingPage() {
 }
 
 const pixabayApi = new PixabayAPI();
-let gallerysimple = new SimpleLightbox('.gallery a');
+let gallerysimple = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});
 
 async function handleSearchPicture(event) {
   event.preventDefault();

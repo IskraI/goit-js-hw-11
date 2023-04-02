@@ -100,7 +100,7 @@ async function handleLoadMorePicture() {
     }
     galleryEl.insertAdjacentHTML('beforeend', pictureCardTpl(data.hits));
     scrollingPage();
-
+    loadMoreBtnEl.blur();
     gallerysimple.refresh();
   } catch (err) {
     console.log(err);

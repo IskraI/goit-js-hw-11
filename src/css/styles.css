@@ -10,6 +10,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  margin: 0;
 }
 h1,
 h2,
@@ -46,7 +47,7 @@ button {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 0px 0 15px 0;
 }
 
 .gallery {
@@ -74,6 +75,7 @@ button {
   z-index: 100;
   width: 100%;
   background-color: #83c8e9;
+  padding: 4px;
 }
 .search-form {
   display: flex;
@@ -82,7 +84,7 @@ button {
 }
 
 .search-form > input {
-  height: 40px;
+  height: 36px;
   flex-grow: 1;
   font-size: 18px;
   padding-left: 15px;

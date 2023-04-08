@@ -17,6 +17,7 @@ loadMoreBtnEl.addEventListener('click', handleLoadMorePicture);
 formEl.elements.searchQuery.addEventListener('focus', searchBtnActive);
 
 function searchBtnActive() {
+  formEl.elements.searchQuery.value = '';
   formElSearchBtn.removeAttribute('disabled');
 }
 function searchBtnNotActive() {
@@ -86,7 +87,7 @@ async function handleSearchPicture(event) {
   }
 
   searchBtnNotActive();
-  formEl.elements[0].blur();
+  formEl.elements.searchQuery.blur();
 }
 
 async function handleLoadMorePicture() {

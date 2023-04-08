@@ -84,8 +84,9 @@ async function handleSearchPicture(event) {
   } catch (err) {
     galleryEl.textContent = 'Images not found';
   }
-  console.dir(loadMoreBtnEl);
+
   searchBtnNotActive();
+  formEl.elements[0].blur();
 }
 
 async function handleLoadMorePicture() {

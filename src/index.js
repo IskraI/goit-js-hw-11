@@ -92,7 +92,9 @@ async function handleLoadMorePicture() {
   pixabayApi.page += 1;
   try {
     const { data } = await pixabayApi.fetchPicturies();
-    if (data.hits.length < pixabayApi.per_page || data.hits.length === 0) {
+
+    const lastPage = Math.ceil(data.totalHits / pixabayApi.per_page);
+    if (pixabayApi.page === lastPage || data.hits.length === 0) {
       loadMoreBtnNotActive();
       Notiflix.Notify.info(
         "We're sorry, but you've reached the end of search results."
